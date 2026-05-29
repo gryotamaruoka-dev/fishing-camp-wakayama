@@ -111,6 +111,7 @@
   /* map */
   .map-grid{display:grid;grid-template-columns:1.5fr 1fr;}
   .map-grid .ph{min-height:280px;}
+  .map-photo{width:100%;min-height:280px;height:100%;object-fit:cover;display:block;}
   .access{padding:24px;display:flex;flex-direction:column;gap:14px;}
   .access .a{position:relative;padding-left:22px;font-size:12.5px;color:var(--ink-soft);}
   .access .a::before{content:"✈";position:absolute;left:0;top:0;color:var(--stamp);}
@@ -134,10 +135,6 @@
   .spot p{font-size:12px;color:var(--ink-soft);}
   .spot .info{margin-top:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);display:flex;flex-direction:column;gap:3px;}
 
-  /* gallery */
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-  .gallery .ph{aspect-ratio:1;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);}
-
   /* packing */
   .pack-progress{font-family:var(--hand);font-size:16px;color:var(--stamp);margin-bottom:18px;}
   .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -158,17 +155,10 @@
 
   /* real images */
   .spot-img{width:100%;height:140px;object-fit:cover;display:block;}
-  .gallery img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);}
   .qr-stub-img{width:100%;max-width:108px;margin-top:10px;border-radius:6px;}
 
-  /* QR map grid */
-  .qr-map{min-height:280px;display:grid;grid-template-columns:1fr 1fr;gap:0;}
-  .qr-cell{padding:20px 14px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-  .qr-cell img{width:96px;height:96px;}
-  .qr-cell .qr-lbl{font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-top:6px;letter-spacing:.05em;line-height:1.4;}
-
   /* image credits */
-  .credits{padding:16px 30px;border-top:1px dashed var(--line);}
+  .credits{padding:14px 30px;border-top:1px dashed var(--line);}
   .credits p{font-family:var(--mono);font-size:9px;color:var(--ink-soft);line-height:1.9;letter-spacing:.03em;}
 
   @media(max-width:680px){
@@ -176,11 +166,9 @@
     .bp-stub{flex-direction:row;flex-wrap:wrap;gap:12px;}
     .map-grid{grid-template-columns:1fr;}
     .pack-grid{grid-template-columns:1fr;}
-    .gallery{grid-template-columns:repeat(2,1fr);}
     .bp-meta{gap:14px;}
     nav .inner{justify-content:center;}
     nav .brand{width:100%;text-align:center;margin:0 0 4px;}
-    .qr-map{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
@@ -194,7 +182,6 @@
     <a href="#map">MAP</a>
     <a href="#budget">BUDGET</a>
     <a href="#spots">SPOT</a>
-    <a href="#gallery">PHOTO</a>
     <a href="#packing">持ち物</a>
   </div>
 </nav>
@@ -327,33 +314,19 @@
 
   <!-- MAP -->
   <section id="map" class="sec" data-screen-label="地図・アクセス">
-    <div class="sec-head"><span class="sec-no">03</span><h2>地図とアクセス</h2><span class="en">MAP &amp; ACCESS / QR</span></div>
+    <div class="sec-head"><span class="sec-no">03</span><h2>地図とアクセス</h2><span class="en">MAP &amp; ACCESS</span></div>
     <div class="ticket">
       <div class="map-grid">
-        <div class="qr-map">
-          <div class="qr-cell">
-            <img src="docs/images/qr-fishing.png" alt="田ノ浦漁港 QR" />
-            <span class="qr-lbl">🎣 田ノ浦漁港<br>和歌山市</span>
-          </div>
-          <div class="qr-cell">
-            <img src="docs/images/qr-onsen.png" alt="大江戸温泉物語 QR" />
-            <span class="qr-lbl">♨ 大江戸温泉物語<br>南紀白浜</span>
-          </div>
-          <div class="qr-cell">
-            <img src="docs/images/qr-camp.png" alt="月野瀬リバーサイド QR" />
-            <span class="qr-lbl">🏕 月野瀬リバーサイド<br>古座川町</span>
-          </div>
-          <div class="qr-cell">
-            <img src="docs/images/qr-market.png" alt="とれとれ市場 QR" />
-            <span class="qr-lbl">🐟 とれとれ市場<br>南紀白浜</span>
-          </div>
-        </div>
+        <img class="map-photo" src="docs/images/sea-wakayama.jpg" alt="橋杭岩・熊野灘（串本町）" />
         <div class="access cut">
           <div class="a"><b>行き：野田 → 田ノ浦漁港</b>阪神高速 → 阪和道 → 和歌山IC / 約¥1,100</div>
           <div class="a"><b>帰り：田辺IC → 野田</b>阪和道 → 松原JCT → 阪神高速 / 約¥3,270</div>
           <div class="a"><b>往復合計（車1台・休日ETC）</b>約¥4,370 → 3人割：約¥1,457/人</div>
           <div class="a"><b>キャンプ地：月野瀬リバーサイド</b>古座川町月野瀬。古座川沿い無料サイト</div>
         </div>
+      </div>
+      <div class="credits">
+        <p>橋杭岩 © NAKAJI CC BY 4.0 (Wikimedia Commons)</p>
       </div>
     </div>
   </section>
@@ -384,10 +357,22 @@
           <div class="body">
             <span class="cat">🎣 FISHING PORT</span>
             <h3>田ノ浦漁港</h3>
-            <p>和歌山市内の漁港。熊野灘のアジ・イワシのサビキ釣りが楽しめる。足場がよく初心者でも安心。</p>
+            <p>和歌山市内の漁港。熊野灘のアジ・イワシをサビキ仕掛けで狙う。足場がよく初心者でも安心。</p>
             <div class="info">
               <span>ACCESS  和歌山市田ノ浦</span>
               <span>TARGET  アジ・イワシ・サバ</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot">
+          <img class="spot-img" src="docs/images/sea-wakayama.jpg" alt="橋杭岩・熊野灘" />
+          <div class="body">
+            <span class="cat">🌊 SCENIC SPOT</span>
+            <h3>橋杭岩・熊野灘</h3>
+            <p>串本町の奇岩群。国道42号線沿いに広がる熊野灘の絶景。ドライブ中に立ち寄れる展望スポット。</p>
+            <div class="info">
+              <span>ACCESS  和歌山県串本町</span>
+              <span>OPEN    24H・無料</span>
             </div>
           </div>
         </div>
@@ -404,11 +389,11 @@
           </div>
         </div>
         <div class="spot">
-          <img class="spot-img" src="docs/images/camp-river.jpg" alt="月野瀬リバーサイド 古座川" />
+          <img class="spot-img" src="docs/images/camp-river.jpg" alt="月野瀬リバーサイドキャンプ 古座川" />
           <div class="body">
             <span class="cat">🏕 CAMP SITE</span>
             <h3>月野瀬リバーサイド</h3>
-            <p>古座川町の無料河川キャンプ地。清流のせせらぎと星空が最高。直火OKの野趣あふれるサイト。</p>
+            <p>古座川町の無料河川キャンプ地。清流のせせらぎと満天の星が最高。直火OKの野趣あふれるサイト。</p>
             <div class="info">
               <span>FEE    無料（届出不要）</span>
               <span>LOC    古座川町月野瀬</span>
@@ -416,7 +401,19 @@
           </div>
         </div>
         <div class="spot">
-          <img class="spot-img" src="docs/images/fukahi.jpg" alt="とれとれ市場" />
+          <img class="spot-img" src="docs/images/campfire.jpg" alt="焚き火" />
+          <div class="body">
+            <span class="cat">🔥 BBQ &amp; BONFIRE</span>
+            <h3>BBQ &amp; 焚き火</h3>
+            <p>釣ったアジ・イワシを炭火で塩焼き。肉・野菜も豪快に。焚き火を囲んで深夜まで語り明かす。</p>
+            <div class="info">
+              <span>LOC    月野瀬リバーサイドキャンプ</span>
+              <span>炭・食材はオークワ串本で調達</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot">
+          <img class="spot-img" src="docs/images/fukahi.jpg" alt="とれとれ市場 南紀白浜" />
           <div class="body">
             <span class="cat">🐟 FISH MARKET</span>
             <h3>とれとれ市場</h3>
@@ -428,28 +425,10 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="sec" data-screen-label="写真ギャラリー">
-    <div class="sec-head"><span class="sec-no">06</span><h2>写真ギャラリー</h2><span class="en">PHOTO LOG</span></div>
-    <div class="ticket">
-      <div class="gallery">
-        <img src="docs/images/sea-wakayama.jpg" alt="橋杭岩・熊野灘" />
-        <img src="docs/images/aji-fishing.jpg" alt="アジ釣り" />
-        <img src="docs/images/tanoura.jpg" alt="田ノ浦漁港" />
-        <img src="docs/images/onsen2.jpg" alt="白浜温泉" />
-        <img src="docs/images/camp-tent.jpg" alt="テントキャンプ" />
-        <img src="docs/images/bbq.jpg" alt="BBQ" />
-        <img src="docs/images/campfire.jpg" alt="焚き火" />
-        <img src="docs/images/grilling.jpg" alt="炭火焼き" />
-      </div>
       <div class="credits">
         <p>
-          橋杭岩 © NAKAJI CC BY 4.0 ／ アジ © Nesnad CC BY 4.0 ／ 雑賀崎漁港 © Kasai noy CC BY-SA 4.0 ／
-          白浜温泉 © 663highland CC BY 2.5 ／ テントキャンプ © Jygle CC BY-SA 4.0 ／ BBQ © Puikstekend CC BY-SA 4.0 ／
-          焚き火 © Marc-Lautenbacher CC BY-SA 4.0 ／ 炭火焼き © Clotee Allochuku-Albritton CC BY 2.0
+          漁港 © Kasai noy CC BY-SA 4.0 ／ 橋杭岩 © NAKAJI CC BY 4.0 ／ 白浜温泉 © 663highland CC BY 2.5 ／
+          古座川 © Bakkai CC BY-SA 3.0 ／ 焚き火 © Marc-Lautenbacher CC BY-SA 4.0 ／ 港 © 阪神強いな CC BY-SA 3.0
         </p>
       </div>
     </div>
@@ -457,7 +436,7 @@
 
   <!-- PACKING -->
   <section id="packing" class="sec" data-screen-label="持ち物リスト">
-    <div class="sec-head"><span class="sec-no">07</span><h2>持ち物チェック</h2><span class="en">PACKING LIST</span></div>
+    <div class="sec-head"><span class="sec-no">06</span><h2>持ち物チェック</h2><span class="en">PACKING LIST</span></div>
     <div class="ticket"><div class="card-body">
       <p class="pack-progress" id="packProgress">0 / 0</p>
       <div class="pack-grid" id="packGrid">
