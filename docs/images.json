@@ -1,0 +1,151 @@
+[
+  {
+    "slot": "kemurigi",
+    "file": "docs/images/kemurigi.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Enjugahama.jpg",
+    "title": "Enjugahama.jpg",
+    "author": "Opqr (Wikimedia Commons User)",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Enjugahama.jpg",
+    "note": "煙樹ヶ浜（和歌山県御坊市〜美浜町）の砂利浜"
+  },
+  {
+    "slot": "tanoura",
+    "file": "docs/images/tanoura.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Saikazaki_Fishing_harbor_%28cropped%29.jpg",
+    "title": "Saikazaki Fishing harbor (cropped).jpg",
+    "author": "Kasai noy",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saikazaki_Fishing_harbor_(cropped).jpg",
+    "note": "田ノ浦漁港の代替: 雑賀崎漁港（和歌山市）。田ノ浦漁港単体の写真はWikimedia Commonsに存在しないため、同じ和歌山市内の漁港写真を使用。"
+  },
+  {
+    "slot": "fukahi",
+    "file": "docs/images/fukahi.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Izumisanoko001.JPG",
+    "title": "Izumisanoko001.JPG",
+    "author": "阪神強いな",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Izumisanoko001.JPG",
+    "note": "深日港の代替: 泉佐野港（大阪府泉佐野市）。深日港（岬町）単体の写真はWikimedia Commonsに存在しないため、同じ大阪府南部の漁港写真を使用。"
+  },
+  {
+    "slot": "onsen",
+    "file": "docs/images/onsen.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/131221_Shirahama_Onsen_Shirahama_Wakayama_pref_Japan01s3.jpg",
+    "title": "131221 Shirahama Onsen Shirahama Wakayama pref Japan01s3.jpg",
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:131221_Shirahama_Onsen_Shirahama_Wakayama_pref_Japan01s3.jpg",
+    "note": "御坊・みなべ周辺温泉の代替: 白浜温泉（和歌山県白浜町）。みなべ温泉・御坊温泉単体の写真はWikimedia Commonsに存在しないため、和歌山県を代表する温泉地・白浜温泉の写真を使用。"
+  },
+  {
+    "slot": "minabe-lunch",
+    "file": "docs/images/minabe-lunch.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Minabe_Ume-shinkokan01n4272.jpg",
+    "title": "Minabe Ume-shinkokan01n4272.jpg",
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Minabe_Ume-shinkokan01n4272.jpg",
+    "note": "道の駅みなべうめ振興館（和歌山県日高郡みなべ町）の外観"
+  },
+  {
+    "slot": "aji-fishing",
+    "file": "docs/images/aji-fishing.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Trachurus_japonicus_for_sale_in_Tokyo_area_-_Oct_7_2019.jpeg",
+    "title": "Trachurus japonicus for sale in Tokyo area - Oct 7 2019.jpeg",
+    "author": "Nesnad",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trachurus_japonicus_for_sale_in_Tokyo_area_-_Oct_7_2019.jpeg",
+    "note": "マアジ（Trachurus japonicus）の実写。市場で販売されている新鮮なアジ。BBQカード・ヒーロー画像用。"
+  }
+  ,{
+    "slot": "bbq",
+    "file": "docs/images/bbq.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Small_barbecue_in_the_forest%2C_Oisterwijk%2C_Netherlands%2C_July_2017.jpg",
+    "title": "Small barbecue in the forest, Oisterwijk, Netherlands, July 2017.jpg",
+    "author": "Puikstekend",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Small_barbecue_in_the_forest,_Oisterwijk,_Netherlands,_July_2017.jpg"
+  },
+  {
+    "slot": "camp-river",
+    "file": "docs/images/camp-river.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Kozagawa_Takaike.jpg",
+    "title": "Kozagawa Takaike.jpg",
+    "author": "Bakkai",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kozagawa_Takaike.jpg",
+    "note": "古座川（和歌山県東牟婁郡古座川町）の高池付近。清流と山林の風景。"
+  },
+  {
+    "slot": "camp-tent",
+    "file": "docs/images/camp-tent.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Campfire_in_front_of_two_Bivouac_tents.jpg",
+    "title": "Campfire in front of two Bivouac tents.jpg",
+    "author": "Jygle",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Campfire_in_front_of_two_Bivouac_tents.jpg",
+    "note": "テントと焚き火のキャンプサイト。河原・野営イメージ用。"
+  },
+  {
+    "slot": "campfire",
+    "file": "docs/images/campfire.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Campfire_flames_at_night.jpg",
+    "title": "Campfire flames at night.jpg",
+    "author": "Marc-Lautenbacher",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Campfire_flames_at_night.jpg",
+    "note": "夜の焚き火。炎のクローズアップ写真。"
+  },
+  {
+    "slot": "grilling",
+    "file": "docs/images/grilling.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Barbecue_chicken_at_California_Strawberry_Festival_2012.jpg",
+    "title": "Barbecue chicken at California Strawberry Festival 2012.jpg",
+    "author": "Clotee Allochuku-Albritton",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barbecue_chicken_at_California_Strawberry_Festival_2012.jpg",
+    "note": "炭火焼きチキン・バーベキューの実写写真。"
+  },
+  {
+    "slot": "onsen2",
+    "file": "docs/images/onsen2.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/131221_Shirahama_Onsen_Shirahama_Wakayama_pref_Japan14s3.jpg",
+    "title": "131221 Shirahama Onsen Shirahama Wakayama pref Japan14s3.jpg",
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:131221_Shirahama_Onsen_Shirahama_Wakayama_pref_Japan14s3.jpg",
+    "note": "白浜温泉（和歌山県白浜町）の露天風呂。onsen.jpg（Japan01s3）とは別アングル・別浴槽。"
+  },
+  {
+    "slot": "onsen3",
+    "file": "docs/images/onsen3.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takanoyu_Onsen_Rotenburo_003.JPG",
+    "title": "Takanoyu Onsen Rotenburo 003.JPG",
+    "author": "RickardA",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Takanoyu_Onsen_Rotenburo_003.JPG",
+    "note": "鷹ノ湯温泉（秋田県）の露天風呂。内湯・大浴場の代替として使用（和歌山県内の大浴場写真はCommons未収録）。"
+  },
+  {
+    "slot": "fishing-port",
+    "file": "docs/images/fishing-port.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Saikazaki_Fishing_harbor.jpg",
+    "title": "Saikazaki Fishing harbor.jpg",
+    "author": "Kasai noy",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saikazaki_Fishing_harbor.jpg",
+    "note": "雑賀崎漁港（和歌山市）。串本・古座港の写真はWikimedia Commonsに未収録のため、同じ和歌山県内の漁港・堤防写真を使用。1280x851px。"
+  },
+  {
+    "slot": "sea-wakayama",
+    "file": "docs/images/sea-wakayama.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Wakayama-hashiguiiwa-xl.jpg",
+    "title": "Wakayama-hashiguiiwa-xl.jpg",
+    "author": "NAKAJI",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wakayama-hashiguiiwa-xl.jpg",
+    "note": "橋杭岩（和歌山県東牟婁郡串本町）。熊野灘に突き出た奇岩群の実写。串本エリアの海岸風景として使用。1280x720px。"
+  }
+]

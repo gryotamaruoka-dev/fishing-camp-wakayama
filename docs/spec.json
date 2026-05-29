@@ -1,0 +1,21 @@
+{
+  "title": "和歌山・白浜 釣り＆キャンプ旅のしおり",
+  "typology": "travel-itinerary",
+  "framework": "pico-css",
+  "must_contain_text": [
+    "和歌山",
+    "6月17日",
+    "釣り",
+    "キャンプ",
+    "温泉",
+    "持ち物",
+    "古座川"
+  ],
+  "image_slots": [
+    {"role": "hero", "count": 1, "type": "destination-landmark"},
+    {"role": "fishing", "count": 1, "type": "activity"},
+    {"role": "camping", "count": 1, "type": "activity"},
+    {"role": "onsen", "count": 1, "type": "spot"}
+  ],
+  "snippets_to_use": ["hero", "timeline", "checklist", "card-grid"]
+}
