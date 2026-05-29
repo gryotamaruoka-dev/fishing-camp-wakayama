@@ -1,979 +1,521 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>和歌山 古座川 釣り＆焚き火野営旅 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>旅のしおり｜和歌山 釣り＆野営旅 2026.6.17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#e8e4dc;
+    --card:#fdfcf9;
+    --ink:#2b2a28;
+    --ink-soft:#6f6c66;
+    --line:#d2cdc2;
+    --ink-blue:#2f4858;
+    --stamp:#b5503c;
+    --hand:"Yusei Magic",cursive;
+    --mono:"Roboto Mono",monospace;
+    --body:"Zen Kaku Gothic New",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;
+    background-color:var(--bg);
+    background-image:radial-gradient(circle at 12% 12%, rgba(0,0,0,.03) 1px, transparent 1px);
+    background-size:22px 22px;
+    padding:0 0 60px;
+  }
+  .container{max-width:840px;margin:0 auto;padding:0 18px;}
 
-    :root {
-      --primary:       #1652F0;
-      --primary-dark:  #0A3DBF;
-      --primary-light: #EBF0FF;
-      --primary-mid:   #BDD0FF;
-      --coral:         #FF5A35;
-      --coral-bg:      #FFF0EC;
-      --green:         #00A878;
-      --green-bg:      #E6F7F3;
-      --amber:         #F59E0B;
-      --amber-bg:      #FFFBEB;
-      --red:           #EF4444;
-      --bg:            #F7F9FF;
-      --bg-card:       #FFFFFF;
-      --bg-card2:      #F3F6FF;
-      --text:          #111827;
-      --text-muted:    #374151;
-      --text-dim:      #9CA3AF;
-      --border:        #E2E8F8;
-      --border2:       #C7D2EE;
-      --shadow-sm:     0 1px 4px rgba(22,82,240,.07);
-      --shadow-md:     0 6px 24px rgba(22,82,240,.12);
-      --font-serif:    'Noto Serif JP', serif;
-      --font-sans:     'Noto Sans JP', system-ui, sans-serif;
-      --r: 14px;
-    }
+  /* nav */
+  nav{position:sticky;top:0;z-index:40;background:var(--ink-blue);}
+  nav .inner{max-width:840px;margin:0 auto;padding:11px 18px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+  nav .brand{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.14em;color:#fff;margin-right:auto;}
+  nav a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#c3cdd3;text-decoration:none;padding:5px 8px;border-radius:4px;transition:.16s;}
+  nav a:hover{background:rgba(255,255,255,.12);color:#fff;}
 
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:visited { color: var(--primary-dark); }
+  /* ticket card base */
+  .ticket{
+    background:var(--card);border-radius:14px;position:relative;
+    box-shadow:0 16px 40px -24px rgba(43,42,40,.6);
+    margin:34px 0;overflow:hidden;
+    border:1px solid var(--line);
+  }
+  /* perforation notch helper */
+  .perf{position:relative;}
+  .perf::before,.perf::after{content:"";position:absolute;width:26px;height:26px;border-radius:50%;background:var(--bg);top:50%;transform:translateY(-50%);}
+  .perf::before{left:-14px;}
+  .perf::after{right:-14px;}
+  .cut{border-left:2px dashed var(--line);}
 
-    /* ─── HERO ─── */
-    .hero {
-      position: relative;
-      min-height: min(100svh, 100vh);
-      min-height: 640px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-    }
-    .hero-img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 40%;
-      filter: brightness(.6) saturate(1.15);
-    }
-    .hero-grad {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,.93) 0%,
-        rgba(0,0,0,.4) 50%,
-        rgba(0,0,0,.05) 100%
-      );
-    }
-    .hero-body {
-      position: relative; z-index: 1;
-      width: 100%; max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--primary);
-      color: #fff;
-      font-size: .65rem; font-weight: 800;
-      letter-spacing: .2em; text-transform: uppercase;
-      padding: .28rem 1rem; border-radius: 99px;
-      margin-bottom: 1.2rem;
-    }
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 7vw, 4rem);
-      font-weight: 900;
-      line-height: 1.15;
-      color: #FFFFFF;
-      margin-bottom: 1.6rem;
-      letter-spacing: -.02em;
-    }
-    .hero-title .accent { color: #7EC9FF; }
-    .hero-meta {
-      display: flex; flex-wrap: wrap;
-      gap: .5rem .7rem;
-    }
-    .hero-chip {
-      display: inline-flex; align-items: center; gap: .4rem;
-      background: rgba(255,255,255,.13);
-      border: 1px solid rgba(255,255,255,.28);
-      backdrop-filter: blur(12px);
-      border-radius: 99px;
-      padding: .35rem .95rem;
-      font-size: .8rem; color: #fff;
-      font-weight: 500;
-    }
-    .hero-chip svg { width: 14px; height: 14px; flex-shrink: 0; }
-    .hero-chip.weather-chip { cursor: default; }
+  /* placeholders */
+  .ph{position:relative;background:#e9e4da;background-image:repeating-linear-gradient(45deg,rgba(47,72,88,.09) 0,rgba(47,72,88,.09) 2px,transparent 2px,transparent 11px);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;}
+  .ph::after{content:attr(data-label);padding:3px 7px;background:rgba(253,252,249,.82);border-radius:3px;text-align:center;}
 
-    /* ─── LAYOUT ─── */
-    .wrap { max-width: 900px; margin: 0 auto; padding: 0 1.2rem; }
-    .section { margin: 3.5rem 0; }
+  /* COVER boarding pass */
+  .cover{margin-top:34px;}
+  .bp{display:grid;grid-template-columns:1fr 150px;}
+  .bp-main{padding:26px 30px 28px;}
+  .bp-tag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.18em;color:#fff;background:var(--ink-blue);padding:4px 12px;border-radius:20px;}
+  .bp-route{display:flex;align-items:center;gap:16px;margin:18px 0 6px;}
+  .bp-city{text-align:center;}
+  .bp-city .code{font-family:var(--hand);font-size:38px;line-height:1;color:var(--ink-blue);}
+  .bp-city .nm{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.1em;margin-top:4px;}
+  .bp-plane{flex:1;position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0,var(--line) 6px,transparent 6px,transparent 12px);}
+  .bp-plane span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--card);padding:0 8px;font-size:18px;}
+  .bp-title{font-family:var(--hand);font-size:30px;color:var(--ink);margin-top:14px;line-height:1.3;}
+  .bp-sub{font-size:13px;color:var(--ink-soft);}
+  .bp-meta{display:grid;grid-template-columns:repeat(3,auto);gap:22px;margin-top:20px;}
+  .bp-meta .lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--ink-soft);}
+  .bp-meta .val{font-family:var(--mono);font-weight:700;font-size:15px;color:var(--ink);}
+  .bp-stub{background:var(--ink-blue);color:#fff;padding:22px 16px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;}
+  .bp-stub .seat-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;opacity:.7;}
+  .bp-stub .seat{font-family:var(--hand);font-size:30px;line-height:1.1;}
+  .barcode{width:100%;height:42px;background:repeating-linear-gradient(90deg,#fff 0,#fff 2px,transparent 2px,transparent 4px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 1px,transparent 6px);opacity:.9;margin-top:8px;}
 
-    .sec-label {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      font-size: .6rem; font-weight: 800;
-      letter-spacing: .16em; text-transform: uppercase;
-      padding: .22rem .85rem; border-radius: 99px;
-      margin-bottom: .5rem;
-    }
-    .sec-h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      font-weight: 900; color: var(--text);
-      margin-bottom: 1.4rem;
-      letter-spacing: -.02em; line-height: 1.2;
-    }
+  /* section header strip */
+  .sec{margin:30px 0;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;padding:0 4px;}
+  .sec-no{font-family:var(--mono);font-weight:700;font-size:12px;color:#fff;background:var(--stamp);padding:4px 10px;border-radius:4px;letter-spacing:.08em;}
+  .sec-head h2{font-family:var(--hand);font-size:26px;color:var(--ink-blue);}
+  .sec-head .en{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-soft);margin-left:auto;}
+  .card-body{padding:26px 30px;}
 
-    /* ─── OVERVIEW ─── */
-    .ov-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: .75rem;
-    }
-    .ov-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1rem .6rem;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      transition: transform .15s, box-shadow .15s;
-    }
-    .ov-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-    .ov-icon { width: 24px; height: 24px; margin: 0 auto .4rem; display: block; color: var(--primary); }
-    .ov-label { font-size: .58rem; color: var(--text-dim); font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-    .ov-val { font-size: .82rem; font-weight: 800; color: var(--text); margin-top: .15rem; line-height: 1.3; }
+  /* members boarding tags */
+  .members{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0;}
+  .member{padding:18px;border-bottom:1px dashed var(--line);border-right:1px dashed var(--line);display:flex;gap:14px;align-items:center;}
+  .member .avatar{width:54px;height:54px;flex:0 0 54px;border-radius:8px;overflow:hidden;}
+  .member .name{font-family:var(--hand);font-size:20px;}
+  .member .role{font-family:var(--mono);font-size:10px;color:var(--stamp);letter-spacing:.06em;}
+  .member .note{font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.6;}
 
-    /* ─── TIMELINE ─── */
-    .timeline { position: relative; padding-left: 2.4rem; }
-    .timeline::before {
-      content: ''; position: absolute;
-      left: .85rem; top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--primary-mid), var(--border));
-    }
-    .tl-day {
-      font-size: .7rem; font-weight: 800;
-      letter-spacing: .14em; text-transform: uppercase;
-      color: #fff;
-      margin: 2rem 0 1.2rem -2.4rem;
-      padding: .42rem 1.1rem .42rem 1rem;
-      background: var(--primary);
-      border-radius: 0 99px 99px 0;
-      display: inline-block;
-      box-shadow: 0 2px 10px rgba(22,82,240,.3);
-    }
-    .tl-item { position: relative; margin-bottom: 1rem; }
-    .tl-dot {
-      position: absolute; left: -1.59rem; top: .75rem;
-      width: 12px; height: 12px; border-radius: 50%;
-      background: var(--border2);
-      border: 2px solid var(--bg);
-      box-shadow: 0 0 0 2px var(--border2);
-    }
-    .tl-item.hi      .tl-dot { background: var(--coral);   box-shadow: 0 0 0 2px var(--coral); }
-    .tl-item.hi-green .tl-dot { background: var(--green);   box-shadow: 0 0 0 2px var(--green); }
-    .tl-item.hi-teal  .tl-dot { background: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
-    .tl-time { font-size: .7rem; font-weight: 700; color: var(--text-dim); letter-spacing: .07em; margin-bottom: .15rem; }
-    .tl-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: .95rem 1.1rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform .15s, box-shadow .15s;
-    }
-    .tl-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-    .tl-card.c-orange { border-left: 4px solid var(--coral); }
-    .tl-card.c-green  { border-left: 4px solid var(--green); }
-    .tl-card.c-teal   { border-left: 4px solid var(--primary); }
-    .tl-card.c-amber  { border-left: 4px solid var(--amber); }
-    .tl-head {
-      font-weight: 800; font-size: .95rem;
-      display: flex; align-items: flex-start; gap: .5rem;
-      margin-bottom: .25rem; color: var(--text);
-    }
-    .tl-head svg { flex-shrink: 0; margin-top: .1rem; color: var(--primary); }
-    .tl-card.c-orange .tl-head svg { color: var(--coral); }
-    .tl-card.c-green  .tl-head svg { color: var(--green); }
-    .tl-card.c-amber  .tl-head svg { color: var(--amber); }
-    .tl-body { font-size: .84rem; color: var(--text-muted); }
-    .tl-body a { color: var(--primary); font-weight: 600; }
-    .tl-body strong { color: var(--text); font-weight: 700; }
+  /* schedule */
+  .days{display:flex;gap:0;border-bottom:1px solid var(--line);}
+  .day-tab{flex:1;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.06em;padding:14px 6px;border:none;background:#f0ece3;color:var(--ink-soft);cursor:pointer;transition:.16s;border-right:1px solid var(--line);}
+  .day-tab:last-child{border-right:none;}
+  .day-tab span{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;margin-top:2px;opacity:.8;}
+  .day-tab.active{background:var(--card);color:var(--ink-blue);box-shadow:inset 0 3px 0 var(--stamp);}
+  .day-panel{display:none;padding:8px 30px 26px;}
+  .day-panel.active{display:block;animation:fade .3s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:none;}}
+  .sch-row{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:15px 0;border-bottom:1px dashed var(--line);}
+  .sch-row:last-child{border-bottom:none;}
+  .sch-time{font-family:var(--mono);font-weight:700;font-size:14px;color:var(--ink-blue);}
+  .sch-title{font-family:var(--hand);font-size:18px;}
+  .sch-desc{font-size:12.5px;color:var(--ink-soft);}
 
-    /* ─── SLIDESHOW ─── */
-    .slideshow {
-      position: relative; width: 100%;
-      margin-top: .8rem; border-radius: 10px;
-      overflow: hidden; aspect-ratio: 16/9;
-      background: var(--border);
-    }
-    .slideshow img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; opacity: 0;
-      transition: opacity 1s ease;
-      border-radius: 0; border: none; margin: 0;
-    }
-    .slideshow img.active { opacity: 1; }
+  /* map */
+  .map-grid{display:grid;grid-template-columns:1.5fr 1fr;}
+  .map-grid .ph{min-height:280px;}
+  .access{padding:24px;display:flex;flex-direction:column;gap:14px;}
+  .access .a{position:relative;padding-left:22px;font-size:12.5px;color:var(--ink-soft);}
+  .access .a::before{content:"✈";position:absolute;left:0;top:0;color:var(--stamp);}
+  .access .a b{display:block;font-family:var(--hand);font-size:16px;color:var(--ink);font-weight:400;}
 
-    /* ─── ROUTE MAP ─── */
-    .route-wrap {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1.4rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .route-day-lbl {
-      font-size: .64rem; font-weight: 800;
-      color: var(--primary); letter-spacing: .12em;
-      text-transform: uppercase; margin-bottom: .85rem;
-    }
-    .route-row {
-      display: flex; align-items: center;
-      margin-bottom: 1.3rem;
-      overflow-x: auto; padding-bottom: .2rem;
-    }
-    .rnode {
-      display: flex; flex-direction: column;
-      align-items: center; flex-shrink: 0; min-width: 76px;
-    }
-    .rpin {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--bg-card2);
-      border: 2px solid var(--border2);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: .3rem;
-    }
-    .rpin svg { width: 20px; height: 20px; }
-    .rnode.rn-fish  .rpin { border-color: var(--coral);   background: var(--coral-bg); }
-    .rnode.rn-fish  .rpin svg { color: var(--coral); }
-    .rnode.rn-shop  .rpin { border-color: var(--amber);   background: var(--amber-bg); }
-    .rnode.rn-shop  .rpin svg { color: var(--amber); }
-    .rnode.rn-camp  .rpin { border-color: var(--green);   background: var(--green-bg); }
-    .rnode.rn-camp  .rpin svg { color: var(--green); }
-    .rnode.rn-onsen .rpin { border-color: var(--primary); background: var(--primary-light); }
-    .rnode.rn-onsen .rpin svg { color: var(--primary); }
-    .rnode.rn-food  .rpin { border-color: var(--amber);   background: var(--amber-bg); }
-    .rnode.rn-food  .rpin svg { color: var(--amber); }
-    .rnode.rn-start .rpin svg { color: var(--text-dim); }
-    .rname { font-size: .72rem; font-weight: 800; text-align: center; color: var(--text); line-height: 1.2; }
-    .rsub  { font-size: .6rem; color: var(--text-dim); text-align: center; margin-top: .05rem; }
-    .rleg {
-      flex: 1; min-width: 44px;
-      display: flex; flex-direction: column;
-      align-items: center; padding-bottom: 1.4rem;
-    }
-    .rleg-line {
-      width: 100%; height: 2px;
-      background: linear-gradient(to right, var(--primary-mid), var(--primary));
-      position: relative;
-    }
-    .rleg-line::after {
-      content: '▶'; position: absolute;
-      right: -5px; top: -8px;
-      font-size: .6rem; color: var(--primary);
-    }
-    .rleg-info { font-size: .58rem; color: var(--text-dim); margin-top: .25rem; white-space: nowrap; }
-    .route-toll {
-      background: var(--primary-light);
-      border: 1px solid var(--primary-mid);
-      border-radius: 10px;
-      padding: .7rem 1rem;
-      font-size: .8rem; color: var(--text-muted);
-    }
-    .route-toll strong { color: var(--primary-dark); font-weight: 800; }
+  /* budget */
+  .b-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
+  .b-row .amt{font-family:var(--mono);font-weight:700;}
+  .b-total{border-bottom:none;margin-top:6px;padding-top:16px;border-top:2px solid var(--ink-blue);}
+  .b-total span:first-child{font-family:var(--hand);font-size:18px;}
+  .b-total .amt{font-size:20px;color:var(--ink-blue);}
+  .budget-note{font-family:var(--hand);font-size:14px;color:var(--ink-soft);margin-top:14px;}
 
-    /* ─── BUDGET ─── */
-    .budget-wrap {
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-    .budget-wrap table { width: 100%; border-collapse: collapse; }
-    .budget-wrap th {
-      background: var(--primary);
-      color: rgba(255,255,255,.85);
-      font-size: .72rem; font-weight: 700;
-      padding: .65rem 1rem;
-      text-align: left; letter-spacing: .06em;
-    }
-    .budget-wrap td {
-      padding: .6rem 1rem;
-      font-size: .84rem;
-      white-space: nowrap;
-      border-top: 1px solid var(--border);
-    }
-    .budget-wrap tbody tr:nth-child(odd)  td { background: var(--bg-card); }
-    .budget-wrap tbody tr:nth-child(even) td { background: var(--bg); }
-    .budget-total td { background: var(--primary-light) !important; font-weight: 800; color: var(--primary-dark); border-top: 2px solid var(--primary-mid); }
-    .budget-zero { color: var(--green); font-weight: 700; }
-    .budget-amt  { color: var(--coral); font-weight: 700; }
+  /* spots */
+  .spots{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0;}
+  .spot{border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);}
+  .spot .ph{height:140px;}
+  .spot .body{padding:16px 18px;}
+  .spot .cat{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--stamp);}
+  .spot h3{font-family:var(--hand);font-size:21px;margin:3px 0 6px;}
+  .spot p{font-size:12px;color:var(--ink-soft);}
+  .spot .info{margin-top:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);display:flex;flex-direction:column;gap:3px;}
 
-    /* ─── PACKING ─── */
-    .pack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-    .pack-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      padding: 1.2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .pack-head {
-      display: flex; align-items: center; gap: .5rem;
-      font-size: .72rem; font-weight: 800;
-      color: var(--primary);
-      text-transform: uppercase; letter-spacing: .08em;
-      margin-bottom: .8rem;
-    }
-    .pack-head svg { color: var(--primary); }
-    .checklist { list-style: none; display: flex; flex-direction: column; gap: .42rem; }
-    .checklist li { display: flex; align-items: center; gap: .5rem; }
-    .checklist input[type=checkbox] {
-      width: 1rem; height: 1rem;
-      accent-color: var(--primary);
-      flex-shrink: 0; cursor: pointer;
-    }
-    .checklist label { font-size: .84rem; color: var(--text); cursor: pointer; user-select: none; }
-    .checklist input:checked + label { text-decoration: line-through; color: var(--text-dim); }
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+  .gallery .ph{aspect-ratio:1;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);}
 
-    /* ─── TIPS ─── */
-    .tip {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--amber);
-      border-radius: var(--r);
-      padding: 1rem 1.1rem;
-      margin-bottom: .85rem;
-      font-size: .84rem; color: var(--text-muted);
-      box-shadow: var(--shadow-sm);
-    }
-    .tip.tip-warn { border-left-color: var(--coral); }
-    .tip.tip-info { border-left-color: var(--primary); }
-    .tip-title { font-weight: 800; color: var(--text); margin-bottom: .3rem; display: flex; align-items: center; gap: .4rem; }
-    .tip-title svg { flex-shrink: 0; color: var(--amber); }
-    .tip.tip-warn .tip-title svg { color: var(--coral); }
-    .tip.tip-info .tip-title svg { color: var(--primary); }
+  /* packing */
+  .pack-progress{font-family:var(--hand);font-size:16px;color:var(--stamp);margin-bottom:18px;}
+  .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pack-col h3{font-family:var(--hand);font-size:18px;color:var(--ink-blue);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .pack-col h3::before{content:"▸";color:var(--stamp);}
+  .pack-list{list-style:none;display:flex;flex-direction:column;gap:2px;}
+  .pack-list label{display:flex;align-items:center;gap:10px;padding:6px 6px;border-radius:5px;cursor:pointer;font-size:13px;transition:.15s;}
+  .pack-list label:hover{background:#f2eee5;}
+  .pack-list input{appearance:none;width:17px;height:17px;flex:0 0 17px;border:1.5px solid var(--ink-soft);border-radius:3px;position:relative;cursor:pointer;transition:.15s;}
+  .pack-list input:checked{background:var(--ink-blue);border-color:var(--ink-blue);}
+  .pack-list input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;}
+  .pack-list input:checked + span{text-decoration:line-through;color:var(--ink-soft);}
 
-    /* ─── FOOTER ─── */
-    footer {
-      margin-top: 5rem; padding: 2.5rem 1.2rem;
-      background: #111827;
-      text-align: center;
-      font-size: .74rem; color: rgba(255,255,255,.4);
-    }
-    footer a { color: rgba(255,255,255,.5); }
-    footer p:first-child { color: rgba(255,255,255,.85); font-weight: 700; font-size: .9rem; margin-bottom: .6rem; }
+  /* footer stamp */
+  .footer{text-align:center;padding:30px 0 10px;}
+  .footer .stamp{display:inline-block;border:3px double var(--stamp);color:var(--stamp);font-family:var(--hand);font-size:20px;padding:14px 26px;border-radius:8px;transform:rotate(-4deg);}
+  .footer p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--ink-soft);margin-top:18px;}
 
-    /* ─── MOBILE ─── */
-    @media (max-width: 640px) {
-      .ov-grid { grid-template-columns: repeat(3, 1fr); }
-      .timeline { padding-left: 1.9rem; }
-      .timeline::before { left: .65rem; }
-      .tl-dot { left: -1.28rem; }
-      .tl-day { margin-left: -1.9rem; }
-      .hero-title { font-size: 2rem; }
-    }
-    @media (max-width: 400px) {
-      .ov-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media print {
-      body { background: #fff; color: #111; }
-      .hero-img { filter: none; }
-      footer { display: none; }
-    }
-  </style>
+  /* real images */
+  .spot-img{width:100%;height:140px;object-fit:cover;display:block;}
+  .gallery img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);}
+  .qr-stub-img{width:100%;max-width:108px;margin-top:10px;border-radius:6px;}
+
+  /* QR map grid */
+  .qr-map{min-height:280px;display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .qr-cell{padding:20px 14px;border-right:1px dashed var(--line);border-bottom:1px dashed var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .qr-cell img{width:96px;height:96px;}
+  .qr-cell .qr-lbl{font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-top:6px;letter-spacing:.05em;line-height:1.4;}
+
+  /* image credits */
+  .credits{padding:16px 30px;border-top:1px dashed var(--line);}
+  .credits p{font-family:var(--mono);font-size:9px;color:var(--ink-soft);line-height:1.9;letter-spacing:.03em;}
+
+  @media(max-width:680px){
+    .bp{grid-template-columns:1fr;}
+    .bp-stub{flex-direction:row;flex-wrap:wrap;gap:12px;}
+    .map-grid{grid-template-columns:1fr;}
+    .pack-grid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .bp-meta{gap:14px;}
+    nav .inner{justify-content:center;}
+    nav .brand{width:100%;text-align:center;margin:0 0 4px;}
+    .qr-map{grid-template-columns:1fr 1fr;}
+  }
+</style>
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
-<header class="hero">
-  <img class="hero-img" src="docs/images/camp-river.jpg" alt="古座川の清流" />
-  <div class="hero-grad"></div>
-  <div class="hero-body">
-    <div class="hero-badge">Fishing &amp; Camp Itinerary 2026</div>
-    <h1 class="hero-title">
-      和歌山 古座川<br>
-      <span class="accent">アジ釣り</span>＆焚き火野営旅
-    </h1>
-    <div class="hero-meta">
-      <span class="hero-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        2026年6月17日（土）〜18日（日）
-      </span>
-      <span class="hero-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        男性3人
-      </span>
-      <span class="hero-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        野田発着 · マイカー
-      </span>
-      <span class="hero-chip weather-chip" id="weather-display">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-        天気確認中…
-      </span>
-    </div>
+<nav>
+  <div class="inner">
+    <span class="brand">BOARDING PASS / WAKAYAMA FISHING</span>
+    <a href="#members">MEMBER</a>
+    <a href="#schedule">SCHEDULE</a>
+    <a href="#map">MAP</a>
+    <a href="#budget">BUDGET</a>
+    <a href="#spots">SPOT</a>
+    <a href="#gallery">PHOTO</a>
+    <a href="#packing">持ち物</a>
   </div>
-</header>
+</nav>
 
-<main>
-<div class="wrap">
+<div class="container">
 
-  <!-- ═══ OVERVIEW ═══ -->
-  <section class="section">
-    <div class="sec-label">Overview</div>
-    <h2 class="sec-h2">旅の概要</h2>
-    <div class="ov-grid">
-      <div class="ov-card">
-        <svg class="ov-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg>
-        <div class="ov-label">メイン</div>
-        <div class="ov-val">アジ釣り</div>
+  <!-- COVER / boarding pass -->
+  <header class="ticket cover perf" data-screen-label="表紙">
+    <div class="bp">
+      <div class="bp-main">
+        <span class="bp-tag">TRAVEL TICKET</span>
+        <div class="bp-route">
+          <div class="bp-city"><div class="code">OSA</div><div class="nm">野田・大阪</div></div>
+          <div class="bp-plane"><span>🚗</span></div>
+          <div class="bp-city"><div class="code">KMN</div><div class="nm">熊野灘</div></div>
+        </div>
+        <div class="bp-title">和歌山、釣り＆野営旅</div>
+        <p class="bp-sub">アジ釣りと焚き火の1泊2日 — 古座川キャンプ</p>
+        <div class="bp-meta">
+          <div><div class="lbl">DATE</div><div class="val">06.17–18</div></div>
+          <div><div class="lbl">NIGHTS</div><div class="val">1泊2日</div></div>
+          <div><div class="lbl">MEMBER</div><div class="val">3 PAX</div></div>
+        </div>
       </div>
-      <div class="ov-card">
-        <svg class="ov-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10"/><path d="m2 10 10-8 10 8"/></svg>
-        <div class="ov-label">宿泊</div>
-        <div class="ov-val">無料野営</div>
+      <div class="bp-stub cut">
+        <div>
+          <div class="seat-lbl">GATE / SEAT</div>
+          <div class="seat">KMN</div>
+        </div>
+        <img src="docs/images/qr-stub.png" class="qr-stub-img" alt="月野瀬リバーサイドキャンプ Google Maps QR" />
       </div>
-      <div class="ov-card">
-        <svg class="ov-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="ov-label">目的地</div>
-        <div class="ov-val">熊野灘→月野瀬</div>
-      </div>
-      <div class="ov-card">
-        <svg class="ov-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-        <div class="ov-label">温泉</div>
-        <div class="ov-val">大江戸温泉・串本</div>
-      </div>
-      <div class="ov-card">
-        <svg class="ov-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div class="ov-label">帰着</div>
-        <div class="ov-val">6/18 16時</div>
+    </div>
+  </header>
+
+  <!-- MEMBERS -->
+  <section id="members" class="sec" data-screen-label="メンバー">
+    <div class="sec-head"><span class="sec-no">01</span><h2>旅の仲間</h2><span class="en">MEMBER LIST</span></div>
+    <div class="ticket">
+      <div class="members">
+        <div class="member">
+          <div class="avatar ph" data-label="ID"></div>
+          <div>
+            <div class="name">丸岡</div>
+            <div class="role">CAPTAIN / DRIVE</div>
+            <p class="note">長距離ドライブ担当。大阪から南紀を颯爽と。道中のBGMも任せろ。</p>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar ph" data-label="ID"></div>
+          <div>
+            <div class="name">江口</div>
+            <div class="role">FISHING / GEAR</div>
+            <p class="note">釣りのプロ。アジ釣り仕掛けはお任せ。魚を捌くのも得意。</p>
+          </div>
+        </div>
+        <div class="member">
+          <div class="avatar ph" data-label="ID"></div>
+          <div>
+            <div class="name">髙尾</div>
+            <div class="role">BBQ / FIRE</div>
+            <p class="note">焚き火マスター。炭おこしと肉の火入れを担当。美食センスあり。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ TIMELINE ═══ -->
-  <section class="section">
-    <div class="sec-label">Itinerary</div>
-    <h2 class="sec-h2">日程表</h2>
-
-    <div class="timeline">
-
-      <div class="tl-day">Day 1 — 6月17日（土）　釣り → ランチ → 温泉 → BBQ → 焚き火</div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">05:00</div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            野田 出発
-          </div>
-          <div class="tl-body">阪神高速・野田出入口 → 松原JCT → 阪和道 → 南紀田辺IC → 国道42号。コンビニとガソリンは出発前に済ませる。</div>
+  <!-- SCHEDULE -->
+  <section id="schedule" class="sec" data-screen-label="日程表">
+    <div class="sec-head"><span class="sec-no">02</span><h2>タイムスケジュール</h2><span class="en">ITINERARY</span></div>
+    <div class="ticket">
+      <div class="days">
+        <button class="day-tab active" data-day="0">DAY 1<span>06/17 WED</span></button>
+        <button class="day-tab" data-day="1">DAY 2<span>06/18 THU</span></button>
+      </div>
+      <div class="day-panel active" data-day="0">
+        <div class="sch-row">
+          <div class="sch-time">05:00</div>
+          <div><div class="sch-title">阿倍野橋 出発</div><div class="sch-desc">阪神高速・野田IC → 松原JCT → 阪和道。6月17日、夜明け前スタート。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">08:30</div>
+          <div><div class="sch-title">🎣 田ノ浦漁港 到着・釣り開始</div><div class="sch-desc">和歌山市内の漁港。熊野灘のアジ・イワシをサビキ仕掛けで狙う。エサはコマセ（現地調達）。釣果をクーラーボックスへ。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">12:30</div>
+          <div><div class="sch-title">🍜 ランチ（道の駅 串本）</div><div class="sch-desc">42号線沿いで軽めに。マグロ丼や海鮮定食が狙い目。休憩もかねてゆっくりと。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">13:45</div>
+          <div><div class="sch-title">🛒 オークワ串本店で食材調達</div><div class="sch-desc">国道42号沿い・24時間営業。南紀最大スーパー。肉・野菜・BBQ用品・炭・ビール全て揃う。古座川へ向かう手前で立ち寄り最適。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">15:00</div>
+          <div><div class="sch-title">♨ 温泉（大江戸温泉物語 白浜）</div><div class="sch-desc">南紀白浜の温泉リゾート。釣りの塩気と汗を流す。飲酒前に入浴を済ませる計画。シャンプー持参可。¥800〜¥1,200/人</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">17:00</div>
+          <div><div class="sch-title">🏕 月野瀬リバーサイド 設営</div><div class="sch-desc">古座川町の無料河川キャンプ地。清流沿いのフリーサイト。テント設営・焚き火準備を完了させる。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">18:00</div>
+          <div><div class="sch-title">🔥 BBQ &amp; 焚き火スタート</div><div class="sch-desc">釣ったアジ・イワシを塩焼き。肉・野菜もたっぷり。焚き火を囲んで深夜まで。川のせせらぎとともに星空を満喫。キャンプ最高。</div></div>
         </div>
       </div>
+      <div class="day-panel" data-day="1">
+        <div class="sch-row">
+          <div class="sch-time">07:00</div>
+          <div><div class="sch-title">🌅 起床・朝ごはん</div><div class="sch-desc">古座川の清流で朝の空気を。残り食材でキャンプ朝飯。焚き火の残り火でコーヒーを。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">09:00</div>
+          <div><div class="sch-title">テント撤収・清掃</div><div class="sch-desc">来た時よりきれいに。ゴミは持ち帰り。炭は完全消火してから処分。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">10:30</div>
+          <div><div class="sch-title">🐟 とれとれ市場 南紀白浜</div><div class="sch-desc">南紀最大の海鮮市場。マグロ・伊勢エビ・鮮魚を試食＆お土産調達。活気ある競りの雰囲気も楽しめる。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">12:30</div>
+          <div><div class="sch-title">帰路へ（田辺ICから）</div><div class="sch-desc">田辺IC → 阪和道 → 松原JCT → 阪神高速 → 野田。帰りは休日ETC割30%オフ。</div></div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">15:00</div>
+          <div><div class="sch-title">🏠 野田・大阪 着</div><div class="sch-desc">釣果とお土産を分けて解散。おつかれさまでした！またやろう。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="tl-item hi">
-        <div class="tl-dot"></div>
-        <div class="tl-time">08:30 〜 13:00</div>
-        <div class="tl-card c-orange">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg>
-            アジ釣り — 熊野灘（古座川河口）
+  <!-- MAP -->
+  <section id="map" class="sec" data-screen-label="地図・アクセス">
+    <div class="sec-head"><span class="sec-no">03</span><h2>地図とアクセス</h2><span class="en">MAP &amp; ACCESS / QR</span></div>
+    <div class="ticket">
+      <div class="map-grid">
+        <div class="qr-map">
+          <div class="qr-cell">
+            <img src="docs/images/qr-fishing.png" alt="田ノ浦漁港 QR" />
+            <span class="qr-lbl">🎣 田ノ浦漁港<br>和歌山市</span>
           </div>
-          <div class="tl-body">
-            黒潮の影響で年間通して安定釣果。2024〜2025年もサビキ・アジング実績多数。車を横づけできる護岸あり。<br>
-            <strong>朝マズメ〜昼前が時合。</strong>コマセ多めで撒いて中層を狙う。釣ったアジは昼飯代わり・夜BBQの主役。<br>
-            串本港も近隣の有力代替（赤灯台エリアは立入禁止・それ以外はOK）。<br>
-            <a href="https://maps.google.com/?q=熊野灘+古座川河口+串本町" target="_blank" rel="noopener noreferrer">Googleマップで見る →</a>
-            <div class="slideshow" id="ss-fishing">
-              <img src="docs/images/fishing-port.jpg" alt="串本の漁港">
-              <img src="docs/images/sea-wakayama.jpg" alt="串本の海">
-              <img src="docs/images/aji-fishing.jpg" alt="アジ">
+          <div class="qr-cell">
+            <img src="docs/images/qr-onsen.png" alt="大江戸温泉物語 QR" />
+            <span class="qr-lbl">♨ 大江戸温泉物語<br>南紀白浜</span>
+          </div>
+          <div class="qr-cell">
+            <img src="docs/images/qr-camp.png" alt="月野瀬リバーサイド QR" />
+            <span class="qr-lbl">🏕 月野瀬リバーサイド<br>古座川町</span>
+          </div>
+          <div class="qr-cell">
+            <img src="docs/images/qr-market.png" alt="とれとれ市場 QR" />
+            <span class="qr-lbl">🐟 とれとれ市場<br>南紀白浜</span>
+          </div>
+        </div>
+        <div class="access cut">
+          <div class="a"><b>行き：野田 → 田ノ浦漁港</b>阪神高速 → 阪和道 → 和歌山IC / 約¥1,100</div>
+          <div class="a"><b>帰り：田辺IC → 野田</b>阪和道 → 松原JCT → 阪神高速 / 約¥3,270</div>
+          <div class="a"><b>往復合計（車1台・休日ETC）</b>約¥4,370 → 3人割：約¥1,457/人</div>
+          <div class="a"><b>キャンプ地：月野瀬リバーサイド</b>古座川町月野瀬。古座川沿い無料サイト</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget" class="sec" data-screen-label="予算・費用">
+    <div class="sec-head"><span class="sec-no">04</span><h2>予算メモ</h2><span class="en">BUDGET</span></div>
+    <div class="ticket"><div class="card-body">
+      <div class="b-row"><span>高速代（往復・休日ETC・3人割）</span><span class="amt">¥1,457</span></div>
+      <div class="b-row"><span>ガソリン（約350km・1人割）</span><span class="amt">¥1,300</span></div>
+      <div class="b-row"><span>野営地（月野瀬リバーサイド）</span><span class="amt">¥0</span></div>
+      <div class="b-row"><span>BBQ食材・飲み物</span><span class="amt">¥2,200</span></div>
+      <div class="b-row"><span>温泉（大江戸温泉物語 白浜）</span><span class="amt">¥1,000</span></div>
+      <div class="b-row"><span>ランチ（道の駅・串本）</span><span class="amt">¥1,000</span></div>
+      <div class="b-row"><span>雑費・予備</span><span class="amt">¥600</span></div>
+      <div class="b-row b-total"><span>合計 / 1人</span><span class="amt">¥7,557</span></div>
+      <p class="budget-note">＊ 割り勘は丸岡まで。釣り仕掛け・餌は別途各自。</p>
+    </div></div>
+  </section>
+
+  <!-- SPOTS -->
+  <section id="spots" class="sec" data-screen-label="スポットガイド">
+    <div class="sec-head"><span class="sec-no">05</span><h2>スポットガイド</h2><span class="en">SPOT GUIDE</span></div>
+    <div class="ticket">
+      <div class="spots">
+        <div class="spot">
+          <img class="spot-img" src="docs/images/fishing-port.jpg" alt="田ノ浦漁港" />
+          <div class="body">
+            <span class="cat">🎣 FISHING PORT</span>
+            <h3>田ノ浦漁港</h3>
+            <p>和歌山市内の漁港。熊野灘のアジ・イワシのサビキ釣りが楽しめる。足場がよく初心者でも安心。</p>
+            <div class="info">
+              <span>ACCESS  和歌山市田ノ浦</span>
+              <span>TARGET  アジ・イワシ・サバ</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot">
+          <img class="spot-img" src="docs/images/onsen.jpg" alt="大江戸温泉物語 白浜" />
+          <div class="body">
+            <span class="cat">♨ ONSEN RESORT</span>
+            <h3>大江戸温泉物語 白浜</h3>
+            <p>南紀白浜の温泉リゾート。露天・大浴場完備。シャンプー・リンス持込可。タオルあり。</p>
+            <div class="info">
+              <span>OPEN   10:00–22:00</span>
+              <span>FEE    ¥800〜¥1,200/人</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot">
+          <img class="spot-img" src="docs/images/camp-river.jpg" alt="月野瀬リバーサイド 古座川" />
+          <div class="body">
+            <span class="cat">🏕 CAMP SITE</span>
+            <h3>月野瀬リバーサイド</h3>
+            <p>古座川町の無料河川キャンプ地。清流のせせらぎと星空が最高。直火OKの野趣あふれるサイト。</p>
+            <div class="info">
+              <span>FEE    無料（届出不要）</span>
+              <span>LOC    古座川町月野瀬</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot">
+          <img class="spot-img" src="docs/images/fukahi.jpg" alt="とれとれ市場" />
+          <div class="body">
+            <span class="cat">🐟 FISH MARKET</span>
+            <h3>とれとれ市場</h3>
+            <p>南紀最大の海鮮市場。マグロ・伊勢エビ・干物がずらり。朝ご飯代わりの海鮮丼も絶品。</p>
+            <div class="info">
+              <span>OPEN   8:30–17:30</span>
+              <span>ACCESS 白浜町堅田2521</span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="tl-item hi">
-        <div class="tl-dot"></div>
-        <div class="tl-time">13:00 〜 13:45</div>
-        <div class="tl-card c-amber">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            ランチ — 串本のラーメン
-          </div>
-          <div class="tl-body">釣り終わったらすぐ飯。串本市街で地元ラーメン。食べてからオークワで買い出し。</div>
-        </div>
-      </div>
-
-      <div class="tl-item hi">
-        <div class="tl-dot"></div>
-        <div class="tl-time">13:45</div>
-        <div class="tl-card c-amber">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            オークワ串本店で食材・つまみまとめ買い
-          </div>
-          <div class="tl-body">
-            国道42号沿い・24時間営業の南紀最大スーパー（串本町串本40-22）。<strong>鮮魚・肉・野菜・炭・ビール・つまみ全部揃う。</strong>古座川店でも最終補充OK（9〜22時）。釣り場から車15分。
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item hi-teal">
-        <div class="tl-dot"></div>
-        <div class="tl-time">15:00 〜 16:30</div>
-        <div class="tl-card c-teal">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-            大江戸温泉物語 南紀串本 — 釣り後の汗を流す
-          </div>
-          <div class="tl-body">
-            熊野灘（古座川河口）から車15〜20分・串本駅徒歩圏。¥1,250・15:00〜23:00。露天＋内湯のリゾートホテル大浴場。シャンプー・タオル持参。<br>
-            <strong>15時開館なので、オークワ買い出し後にちょうど合わせられる。</strong><br>
-            <a href="https://maps.google.com/?q=大江戸温泉物語+南紀串本" target="_blank" rel="noopener noreferrer">Googleマップで見る →</a>
-            <div class="slideshow" id="ss-onsen">
-              <img src="docs/images/onsen.jpg" alt="温泉">
-              <img src="docs/images/onsen2.jpg" alt="露天風呂">
-              <img src="docs/images/onsen3.jpg" alt="大浴場">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item hi-green">
-        <div class="tl-dot"></div>
-        <div class="tl-time">17:00</div>
-        <div class="tl-card c-green">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            月野瀬リバーサイド 着 · テント設営
-          </div>
-          <div class="tl-body">
-            温泉から国道371号で古座川を遡る（車30〜40分）。古座川沿いの無料野営スポット。禁止看板なし・2025年ブログでも焚き火・テント泊の実績多数。ウォシュレットトイレあり。<br>
-            ※草地・駐車場はキャンプ禁止 → <strong>川寄りの河原に設営。場所代¥0。</strong><br>
-            <a href="https://maps.google.com/?q=月野瀬+古座川町+和歌山" target="_blank" rel="noopener noreferrer">Googleマップで見る →</a>
-            <div class="slideshow" id="ss-camp">
-              <img src="docs/images/camp-river.jpg" alt="古座川の清流">
-              <img src="docs/images/camp-tent.jpg" alt="河原テント">
-              <img src="docs/images/kemurigi.jpg" alt="和歌山の海岸">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item hi">
-        <div class="tl-dot"></div>
-        <div class="tl-time">18:00 〜 21:00</div>
-        <div class="tl-card c-orange">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-            BBQ — 釣ったアジ塩焼き + 肉 + ビール
-          </div>
-          <div class="tl-body">
-            設営終わったら即炭起こし。朝釣ったアジをそのまま焼く。肉・野菜もぶち込んで飲む。
-            <div class="slideshow" id="ss-bbq">
-              <img src="docs/images/bbq.jpg" alt="BBQ">
-              <img src="docs/images/campfire.jpg" alt="焚き火">
-              <img src="docs/images/grilling.jpg" alt="炭火焼き">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-day">Day 2 — 6月18日（日）　撤収 → ランチ → 帰阪</div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">07:00</div>
-        <div class="tl-card c-green">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            起床 · 飯
-          </div>
-          <div class="tl-body">ホットサンド・コーヒー・スープ等。前日に買ってあるやつを食う。</div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">08:00 〜 09:00</div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
-            撤収
-          </div>
-          <div class="tl-body">テント・タープをたたんで積む。炭は完全消火。ゴミは全部持ち帰り。</div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">09:00</div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            帰路出発 — 国道42号で白浜・田辺経由
-          </div>
-          <div class="tl-body">月野瀬から北上。白浜方面へ65km・1時間。</div>
-        </div>
-      </div>
-
-      <div class="tl-item hi">
-        <div class="tl-dot"></div>
-        <div class="tl-time">10:30 〜 12:00</div>
-        <div class="tl-card c-orange">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg>
-            ランチ — とれとれ市場（白浜）
-          </div>
-          <div class="tl-body">
-            水産物直売所・海鮮丼が安くて新鮮。昼からガッツリ食って帰る。
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">12:30</div>
-        <div class="tl-card">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            帰路 — 田辺IC → 阪和道 → 阪神高速 → 野田
-          </div>
-          <div class="tl-body">渋滞なければ約1時間30分。日曜夕方は早めに出た方が安心。</div>
-        </div>
-      </div>
-
-      <div class="tl-item hi-green">
-        <div class="tl-dot"></div>
-        <div class="tl-time">14:00 〜 15:00</div>
-        <div class="tl-card c-green">
-          <div class="tl-head">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            野田 着
-          </div>
-          <div class="tl-body">メシ済みで帰着。解散。</div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ═══ ROUTE ═══ -->
-  <section class="section">
-    <div class="sec-label">Route</div>
-    <h2 class="sec-h2">推奨ルート</h2>
-    <div class="route-wrap">
-
-      <div class="route-day-lbl">Day 1 — 行き</div>
-      <div class="route-row">
-        <div class="rnode rn-start">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="rname">野田</div><div class="rsub">5:00発</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">阪和道 約3.5h</div></div>
-        <div class="rnode rn-fish">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg></div>
-          <div class="rname">熊野灘</div><div class="rsub">釣り 8:30〜13時</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">15min</div></div>
-        <div class="rnode rn-shop">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-          <div class="rname">オークワ串本</div><div class="rsub">食材・つまみ</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">15min</div></div>
-        <div class="rnode rn-onsen">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
-          <div class="rname">大江戸温泉</div><div class="rsub">15〜16:30</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">30min</div></div>
-        <div class="rnode rn-camp">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="rname">月野瀬</div><div class="rsub">BBQ→焚き火→就寝</div>
-        </div>
+  <!-- GALLERY -->
+  <section id="gallery" class="sec" data-screen-label="写真ギャラリー">
+    <div class="sec-head"><span class="sec-no">06</span><h2>写真ギャラリー</h2><span class="en">PHOTO LOG</span></div>
+    <div class="ticket">
+      <div class="gallery">
+        <img src="docs/images/sea-wakayama.jpg" alt="橋杭岩・熊野灘" />
+        <img src="docs/images/aji-fishing.jpg" alt="アジ釣り" />
+        <img src="docs/images/tanoura.jpg" alt="田ノ浦漁港" />
+        <img src="docs/images/onsen2.jpg" alt="白浜温泉" />
+        <img src="docs/images/camp-tent.jpg" alt="テントキャンプ" />
+        <img src="docs/images/bbq.jpg" alt="BBQ" />
+        <img src="docs/images/campfire.jpg" alt="焚き火" />
+        <img src="docs/images/grilling.jpg" alt="炭火焼き" />
       </div>
-
-      <div class="route-day-lbl">Day 2 — 帰り</div>
-      <div class="route-row">
-        <div class="rnode rn-camp">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="rname">月野瀬</div><div class="rsub">撤収 9:00</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">65km / 1h</div></div>
-        <div class="rnode rn-food">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg></div>
-          <div class="rname">とれとれ市場</div><div class="rsub">ランチ</div>
-        </div>
-        <div class="rleg"><div class="rleg-line"></div><div class="rleg-info">田辺IC→阪和道</div></div>
-        <div class="rnode rn-start">
-          <div class="rpin"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="rname">野田</div><div class="rsub">16時着</div>
-        </div>
+      <div class="credits">
+        <p>
+          橋杭岩 © NAKAJI CC BY 4.0 ／ アジ © Nesnad CC BY 4.0 ／ 雑賀崎漁港 © Kasai noy CC BY-SA 4.0 ／
+          白浜温泉 © 663highland CC BY 2.5 ／ テントキャンプ © Jygle CC BY-SA 4.0 ／ BBQ © Puikstekend CC BY-SA 4.0 ／
+          焚き火 © Marc-Lautenbacher CC BY-SA 4.0 ／ 炭火焼き © Clotee Allochuku-Albritton CC BY 2.0
+        </p>
       </div>
-
-      <div class="route-toll">
-        🛣️ 高速（土日ETC割）: 行き 野田→南紀田辺IC <strong>¥3,270</strong> / 帰り 田辺IC→野田 <strong>¥3,270</strong> / <strong>往復計 ≈¥6,500 → 3人割 ≈¥2,167/人</strong>（要ETC確認）
-      </div>
-
     </div>
   </section>
 
-  <!-- ═══ BUDGET ═══ -->
-  <section class="section">
-    <div class="sec-label">Budget</div>
-    <h2 class="sec-h2">予算目安（1人あたり）</h2>
-    <div class="budget-wrap">
-      <table>
-        <thead>
-          <tr><th>項目</th><th>金額</th><th>備考</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>高速代（往復・休日ETC）</td><td class="budget-amt">¥2,167</td><td>車1台・3人割（南紀田辺IC往復）</td></tr>
-          <tr><td>ガソリン（往復）</td><td class="budget-amt">¥1,500〜2,000</td><td>3人割（総距離約650km）</td></tr>
-          <tr><td>野営地（月野瀬リバーサイド）</td><td class="budget-zero">¥0</td><td>無料河原野営</td></tr>
-          <tr><td>BBQ食材・飲み物・つまみ</td><td class="budget-amt">¥2,000〜2,500</td><td>オークワ串本店で調達</td></tr>
-          <tr><td>温泉（大江戸温泉物語 南紀串本）</td><td class="budget-amt">¥1,250</td><td>15:00〜23:00・露天+内湯</td></tr>
-          <tr><td>ランチ</td><td class="budget-amt">¥900〜1,500</td><td>とれとれ市場・田辺食堂</td></tr>
-          <tr><td>雑費（コンビニ・朝食等）</td><td class="budget-amt">¥500〜800</td><td>—</td></tr>
-          <tr class="budget-total"><td>合計</td><td>¥7,500〜9,700</td><td>1人あたり（3人割）</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <!-- PACKING -->
+  <section id="packing" class="sec" data-screen-label="持ち物リスト">
+    <div class="sec-head"><span class="sec-no">07</span><h2>持ち物チェック</h2><span class="en">PACKING LIST</span></div>
+    <div class="ticket"><div class="card-body">
+      <p class="pack-progress" id="packProgress">0 / 0</p>
+      <div class="pack-grid" id="packGrid">
+        <div class="pack-col"><h3>釣り道具</h3><ul class="pack-list">
+          <li><label><input type="checkbox"><span>ロッド・リール</span></label></li>
+          <li><label><input type="checkbox"><span>サビキ仕掛け（アジ・イワシ用）</span></label></li>
+          <li><label><input type="checkbox"><span>コマセカゴ・コマセ</span></label></li>
+          <li><label><input type="checkbox"><span>バケツ・ランディングネット</span></label></li>
+          <li><label><input type="checkbox"><span>クーラーボックス（魚用）</span></label></li>
+          <li><label><input type="checkbox"><span>偏光サングラス</span></label></li>
+          <li><label><input type="checkbox"><span>ライフジャケット</span></label></li>
+        </ul></div>
+        <div class="pack-col"><h3>キャンプ用品</h3><ul class="pack-list">
+          <li><label><input type="checkbox"><span>テント・ペグ・ハンマー</span></label></li>
+          <li><label><input type="checkbox"><span>シュラフ・マット</span></label></li>
+          <li><label><input type="checkbox"><span>折り畳みチェア・テーブル</span></label></li>
+          <li><label><input type="checkbox"><span>BBQコンロ・炭・着火剤</span></label></li>
+          <li><label><input type="checkbox"><span>トング・包丁・まな板</span></label></li>
+          <li><label><input type="checkbox"><span>ランタン・ヘッドライト</span></label></li>
+          <li><label><input type="checkbox"><span>ゴミ袋・ウェットティッシュ</span></label></li>
+        </ul></div>
+        <div class="pack-col"><h3>温泉・その他</h3><ul class="pack-list">
+          <li><label><input type="checkbox"><span>タオル・バスタオル</span></label></li>
+          <li><label><input type="checkbox"><span>着替え（2日分）</span></label></li>
+          <li><label><input type="checkbox"><span>シャンプー・ボディソープ</span></label></li>
+          <li><label><input type="checkbox"><span>財布・現金</span></label></li>
+          <li><label><input type="checkbox"><span>スマホ・充電器・モバイルバッテリー</span></label></li>
+          <li><label><input type="checkbox"><span>常備薬・酔い止め・虫除け</span></label></li>
+          <li><label><input type="checkbox"><span>レインウェア・防水シューズ</span></label></li>
+        </ul></div>
+      </div>
+    </div></div>
   </section>
 
-  <!-- ═══ PACKING ═══ -->
-  <section class="section">
-    <div class="sec-label">Packing</div>
-    <h2 class="sec-h2">持ち物チェックリスト</h2>
-    <div class="pack-grid">
-
-      <div class="pack-card">
-        <div class="pack-head">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg>
-          釣り道具
-        </div>
-        <ul class="checklist">
-          <li><input type="checkbox" id="c1"><label for="c1">サビキ仕掛けセット</label></li>
-          <li><input type="checkbox" id="c2"><label for="c2">アジングロッド＋リール</label></li>
-          <li><input type="checkbox" id="c3"><label for="c3">アミコマセ（冷凍）</label></li>
-          <li><input type="checkbox" id="c4"><label for="c4">クーラーボックス</label></li>
-          <li><input type="checkbox" id="c5"><label for="c5">保冷剤・氷</label></li>
-          <li><input type="checkbox" id="c6"><label for="c6">タモ網・バケツ</label></li>
-          <li><input type="checkbox" id="c7"><label for="c7">ハサミ・ペンチ</label></li>
-        </ul>
-      </div>
-
-      <div class="pack-card">
-        <div class="pack-head">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          キャンプ用品
-        </div>
-        <ul class="checklist">
-          <li><input type="checkbox" id="c8"><label for="c8">テント（3人用 or 2+1）</label></li>
-          <li><input type="checkbox" id="c9"><label for="c9">グランドシート</label></li>
-          <li><input type="checkbox" id="c10"><label for="c10">インフレータブルマット</label></li>
-          <li><input type="checkbox" id="c11"><label for="c11">寝袋（夏用）</label></li>
-          <li><input type="checkbox" id="c12"><label for="c12">タープ・ペグ・ロープ</label></li>
-          <li><input type="checkbox" id="c13"><label for="c13">炭・着火剤・チャッカマン</label></li>
-          <li><input type="checkbox" id="c14"><label for="c14">BBQグリル・網・トング</label></li>
-          <li><input type="checkbox" id="c15"><label for="c15">焚き火台</label></li>
-          <li><input type="checkbox" id="c16"><label for="c16">ランタン・ヘッドライト</label></li>
-          <li><input type="checkbox" id="c17"><label for="c17">調理器具・紙皿・割り箸</label></li>
-          <li><input type="checkbox" id="c18"><label for="c18">ゴミ袋（多めに）</label></li>
-        </ul>
-      </div>
-
-      <div class="pack-card">
-        <div class="pack-head">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-          温泉・衛生用品
-        </div>
-        <ul class="checklist">
-          <li><input type="checkbox" id="c19"><label for="c19">タオル（大）</label></li>
-          <li><input type="checkbox" id="c20"><label for="c20">シャンプー・ボディソープ</label></li>
-          <li><input type="checkbox" id="c21"><label for="c21">着替え（1〜2セット）</label></li>
-          <li><input type="checkbox" id="c22"><label for="c22">虫除けスプレー</label></li>
-          <li><input type="checkbox" id="c23"><label for="c23">日焼け止め</label></li>
-          <li><input type="checkbox" id="c24"><label for="c24">救急セット</label></li>
-          <li><input type="checkbox" id="c25"><label for="c25">ETCカード・現金</label></li>
-          <li><input type="checkbox" id="c26"><label for="c26">スマホ充電器・モバイルバッテリー</label></li>
-          <li><input type="checkbox" id="c27"><label for="c27">雨具（カッパ）</label></li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══ TIPS ═══ -->
-  <section class="section">
-    <div class="sec-label">Notes</div>
-    <h2 class="sec-h2">注意事項</h2>
-
-    <div class="tip tip-warn">
-      <div class="tip-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        梅雨シーズン · 古座川増水注意
-      </div>
-      6月は梅雨シーズン。古座川は山からの増水が速い。大雨予報があれば河原野営は即中止。古座川町役場（📞 0735-72-0180）で事前確認推奨。
-    </div>
-
-    <div class="tip tip-info">
-      <div class="tip-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        雨天時プランB
-      </div>
-      小雨なら釣りは可能（合羽必須）。BBQはタープ下でいける。大雨・雷雨・増水注意報が出たら素直に中止。
-    </div>
-
-    <div class="tip">
-      <div class="tip-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
-        野営マナー
-      </div>
-      ゴミ・燃え残り炭は全て持ち帰り。焚き火は完全消火してから就寝。来た時より美しく撤収。
-    </div>
-
-    <div class="tip">
-      <div class="tip-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-6 6-3-3-6 6"/><path d="M14 20s-3-5 2-10"/><path d="M18 20s3-5-2-10"/></svg>
-        釣りのコツ（アジ）
-      </div>
-      朝マズメ（5〜7時）と朝8〜10時が時合。サビキはコマセカゴ付き・針4〜5号。コマセ多めで撒くのが基本。
-    </div>
-  </section>
+  <div class="footer">
+    <div class="stamp">良い釣りを！</div>
+    <p>― HAVE A GREAT TRIP ・ WAKAYAMA FISHING &amp; CAMP 2026 ―</p>
+  </div>
 
 </div>
-</main>
-
-<footer>
-  <p>和歌山 古座川 アジ釣り＆焚き火野営旅 | 2026年6月17〜18日</p>
-  <p style="margin-top:.4rem; line-height:2;">
-    Photo credits (Wikimedia Commons) —
-    古座川: <a href="https://commons.wikimedia.org/wiki/File:Kozagawa_Takaike.jpg" target="_blank" rel="noopener noreferrer">Bakkai</a> CC BY-SA 3.0 /
-    漁港: <a href="https://commons.wikimedia.org/wiki/File:Saikazaki_Fishing_harbor_(cropped).jpg" target="_blank" rel="noopener noreferrer">Kasai noy</a> CC BY-SA 4.0 /
-    橋杭岩: <a href="https://commons.wikimedia.org/wiki/File:Hashiguiiwa20100220.jpg" target="_blank" rel="noopener noreferrer">NAKAJI</a> CC BY 4.0 /
-    アジ: <a href="https://commons.wikimedia.org/wiki/File:Trachurus_japonicus_for_sale_in_Tokyo_area_-_Oct_7_2019.jpeg" target="_blank" rel="noopener noreferrer">Nesnad</a> CC BY 4.0 /
-    海岸: <a href="https://commons.wikimedia.org/wiki/File:Enjugahama.jpg" target="_blank" rel="noopener noreferrer">Opqr</a> CC BY-SA 4.0 /
-    テント: <a href="https://commons.wikimedia.org/wiki/File:Campfire_in_front_of_two_Bivouac_tents.jpg" target="_blank" rel="noopener noreferrer">Jygle</a> CC BY-SA 4.0 /
-    焚き火: <a href="https://commons.wikimedia.org/wiki/File:Campfire_flames_at_night.jpg" target="_blank" rel="noopener noreferrer">Marc-Lautenbacher</a> CC BY-SA 4.0 /
-    BBQ: <a href="https://commons.wikimedia.org/wiki/File:Small_barbecue_in_the_forest,_Oisterwijk,_Netherlands,_July_2017.jpg" target="_blank" rel="noopener noreferrer">Puikstekend</a> CC BY-SA 4.0 /
-    炭火: <a href="https://commons.wikimedia.org/wiki/File:Barbecue_chicken_at_California_Strawberry_Festival_2012.jpg" target="_blank" rel="noopener noreferrer">Clotee Allochuku-Albritton</a> CC BY 2.0 /
-    温泉: <a href="https://commons.wikimedia.org/wiki/File:131221_Shirahama_Onsen_Shirahama_Wakayama_pref_Japan01s3.jpg" target="_blank" rel="noopener noreferrer">663highland</a> CC BY 2.5 /
-    露天風呂: <a href="https://commons.wikimedia.org/wiki/File:Takanoyu_Onsen_Rotenburo_003.JPG" target="_blank" rel="noopener noreferrer">RickardA</a> CC0
-  </p>
-</footer>
 
 <script>
-  // ── Checklist persistence ──
-  const KEY = 'wakayama-camp-2026';
-  const checks = document.querySelectorAll('input[type=checkbox]');
-  function save() {
-    const s = {};
-    checks.forEach(c => { s[c.id] = c.checked; });
-    localStorage.setItem(KEY, JSON.stringify(s));
-  }
-  function load() {
-    try {
-      const s = JSON.parse(localStorage.getItem(KEY) || '{}');
-      checks.forEach(c => { if (s[c.id]) c.checked = true; });
-    } catch {}
-  }
-  load();
-  checks.forEach(c => c.addEventListener('change', save));
-
-  // ── Slideshow ──
-  (function() {
-    function initAll() {
-      document.querySelectorAll('.slideshow').forEach(function(ss, idx) {
-        var imgs = Array.from(ss.querySelectorAll('img'));
-        var loaded = imgs.filter(function(img) { return img.complete && img.naturalWidth > 0; });
-        // Only activate images that actually loaded
-        var valid = imgs.filter(function(img) {
-          return img.src && !img.src.endsWith('/') && img.naturalWidth !== 0;
-        });
-        if (valid.length < 2) {
-          if (imgs[0]) imgs[0].classList.add('active');
-          return;
-        }
-        var cur = 0;
-        valid[cur].classList.add('active');
-        setTimeout(function() {
-          setInterval(function() {
-            valid[cur].classList.remove('active');
-            cur = (cur + 1) % valid.length;
-            valid[cur].classList.add('active');
-          }, 3000);
-        }, idx * 800);
-      });
-    }
-    // Wait for images to attempt loading
-    window.addEventListener('load', initAll);
-    // Fallback: also try after a short delay (in case load already fired)
-    setTimeout(initAll, 500);
-  })();
-
-  // ── Weather fetch (Open-Meteo, no API key) ──
-  async function loadWeather() {
-    const el = document.getElementById('weather-display');
-    const WMO = {
-      0:'快晴',1:'晴れ',2:'晴れ時々曇り',3:'曇り',
-      45:'霧',48:'霧',51:'小雨',53:'雨',55:'強雨',
-      61:'小雨',63:'雨',65:'強雨',
-      71:'雪',73:'雪',75:'大雪',
-      80:'にわか雨',81:'にわか雨',82:'強にわか雨',
-      95:'雷雨',96:'雷雨',99:'大雷雨'
-    };
-    function icon(c) {
-      if (c===0) return '☀️';
-      if (c<=2)  return '🌤️';
-      if (c<=3)  return '☁️';
-      if (c<=48) return '🌫️';
-      if (c<=67) return '🌧️';
-      if (c<=77) return '❄️';
-      if (c<=82) return '🌦️';
-      return '⛈️';
-    }
-    try {
-      const url = 'https://api.open-meteo.com/v1/forecast?latitude=34.23&longitude=135.17'
-        + '&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max'
-        + '&start_date=2026-06-17&end_date=2026-06-18&timezone=Asia%2FTokyo';
-      const r = await fetch(url);
-      if (!r.ok) throw new Error();
-      const d = await r.json();
-      if (!d.daily || !d.daily.weathercode) throw new Error();
-      const codes  = d.daily.weathercode;
-      const tmax   = d.daily.temperature_2m_max;
-      const tmin   = d.daily.temperature_2m_min;
-      const precip = d.daily.precipitation_probability_max;
-      const labels = ['6/17','6/18'];
-      const parts = labels.map((lbl,i) => {
-        const code = codes[i];
-        const txt  = WMO[code] || '不明';
-        return `${lbl} ${icon(code)} ${txt} ${Math.round(tmax[i])}°/${Math.round(tmin[i])}° 降水${precip[i]}%`;
-      });
-      el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> ${parts.join('　')}`;
-    } catch {
-      el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> ☔ 梅雨シーズン — 出発前に天気確認`;
-    }
-  }
-  loadWeather();
+  document.querySelectorAll('.day-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      const d=tab.dataset.day;
+      document.querySelectorAll('.day-tab').forEach(t=>t.classList.toggle('active',t===tab));
+      document.querySelectorAll('.day-panel').forEach(p=>p.classList.toggle('active',p.dataset.day===d));
+    });
+  });
+  const KEY='wakayama-fishing-pack';
+  const boxes=[...document.querySelectorAll('#packGrid input')];
+  const saved=JSON.parse(localStorage.getItem(KEY)||'{}');
+  function up(){const done=boxes.filter(b=>b.checked).length;document.getElementById('packProgress').textContent=`PACKED  ${done} / ${boxes.length}`;}
+  boxes.forEach((b,i)=>{
+    if(saved[i])b.checked=true;
+    b.addEventListener('change',()=>{const s=JSON.parse(localStorage.getItem(KEY)||'{}');s[i]=b.checked;localStorage.setItem(KEY,JSON.stringify(s));up();});
+  });
+  up();
 </script>
 </body>
 </html>
